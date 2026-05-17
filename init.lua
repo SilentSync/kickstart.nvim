@@ -929,7 +929,8 @@ require('lazy').setup({
 
           local language = vim.treesitter.language.get_lang(filetype)
           if not language then return end
-
+          if language == "latex" then return end
+          
           local installed_parsers = require('nvim-treesitter').get_installed 'parsers'
 
           if vim.tbl_contains(installed_parsers, language) then
