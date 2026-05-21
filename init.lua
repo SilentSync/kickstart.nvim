@@ -613,6 +613,7 @@ require('lazy').setup({
         -- gopls = {},
          pyright = {},
         -- rust_analyzer = {},
+        texlab = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
@@ -667,7 +668,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         -- Yor can add other tools here that you want Mason to install
-        "ruff"
+        "ruff",
+        "texlab"
       })
 
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
