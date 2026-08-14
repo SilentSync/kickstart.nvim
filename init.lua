@@ -298,6 +298,15 @@ require('lazy').setup({
       vim.g.vimtex_view_method = "zathura"
     end
   },
+--C# Roslyn plugin (code from Github) 
+  {
+    "seblyng/roslyn.nvim",
+    ---@module 'roslyn.config'
+    ---@type RoslynNvimConfig
+    opts = {
+        -- your configuration comes here; leave empty for default settings
+    },
+  },
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
