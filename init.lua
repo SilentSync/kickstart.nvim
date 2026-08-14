@@ -712,9 +712,10 @@ require('lazy').setup({
           -- lua = true,
           python = true,
           tex = true,
+          cs = true,
         }
         if enabled_filetypes[vim.bo[bufnr].filetype] then
-          return { timeout_ms = 500 }
+          return { timeout_ms = 700 }
         else
           return nil
         end
